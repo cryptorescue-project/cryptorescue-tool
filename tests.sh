@@ -230,7 +230,8 @@ OUTPUT=$($BITCOIN_TOOL \
 check "${TEST}" "${OUTPUT}" "${EXPECTED}" || exit 1
 # -----------------------------------------------------------------------------
 TEST="prefix8 - WIF uncompressed private key to address (ravencoin)"
-EXPECTED="REiWBogEnBEXWphuAoeFX4x3gPoyvJu7zR"
+EXPECTED="RRKyGJUJz54wM5kF8jvxjCTkbchiXrRti2"
+INPUT="5Jq8CqypGBFULBZy1YhjuMdeLat2HXRPjCKdLvdnAJ65SbrFsBM"
 OUTPUT=$($BITCOIN_TOOL \
 	--input-type private-key-wif \
 	--input-format base58check \
