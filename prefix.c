@@ -4,6 +4,22 @@
 #include <string.h>
 
 static const struct BitcoinNetworkType network_types[] = {
+	/*
+	Ravencoin:
+	https://github.com/RavenProject/Ravencoin/blob/master/src/chainparams.cpp#L179
+	*/
+		{
+			.name                    = "ravencoin",
+			.public_key_prefix       = 60,
+			.script_prefix           = 122,
+			.private_key_prefix      = 128
+		},
+		{
+			.name                    = "ravencoin-testnet",
+			.public_key_prefix       = 111,
+			.script_prefix           = 196,
+			.private_key_prefix      = 239
+		},
 /*
 Bitcoin:
 https://en.bitcoin.it/wiki/List_of_address_prefixes
