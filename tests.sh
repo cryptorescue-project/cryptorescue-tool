@@ -229,8 +229,17 @@ OUTPUT=$($BITCOIN_TOOL \
 	--input "${INPUT}")
 check "${TEST}" "${OUTPUT}" "${EXPECTED}" || exit 1
 # -----------------------------------------------------------------------------
-
-
+TEST="prefix8 - WIF uncompressed private key to address (ravencoin)"
+EXPECTED="REiWBogEnBEXWphuAoeFX4x3gPoyvJu7zR"
+OUTPUT=$($BITCOIN_TOOL \
+	--input-type private-key-wif \
+	--input-format base58check \
+	--output-type address \
+	--output-format base58check \
+	--network ravencoin \
+	--input "${INPUT}")
+check "${TEST}" "${OUTPUT}" "${EXPECTED}" || exit 1
+# -----------------------------------------------------------------------------
 
 
 echo "all tests passed"
