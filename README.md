@@ -1,5 +1,5 @@
 ## Introduction
-bitcoin-tool is a simple tool written in C to convert Bitcoin keys to addresses,
+ravencoin-tool is a simple tool written in C to convert Bitcoin keys to addresses,
 and various other conversions of keys.
 
 Disclaimer: THIS CODE IS EXPERIMENTAL, IT IS PROBABLY BUGGY. PLEASE DO NOT
@@ -97,6 +97,8 @@ more data than is expected, then it'll refuse to process it at all.
       uncompressed : force uncompressed public key
     (must be specified for raw/hex keys, should be auto for base58)
   --network        : Network type of keys, one of :
+      ravencoin
+      ravencoin-testnet
       bitcoin
       bitcoin-testnet
       litecoin
