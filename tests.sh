@@ -229,6 +229,18 @@ OUTPUT=$($BITCOIN_TOOL \
 	--input "${INPUT}")
 check "${TEST}" "${OUTPUT}" "${EXPECTED}" || exit 1
 # -----------------------------------------------------------------------------
+TEST="prefix8 - WIF uncompressed private key to address (cryptorescue)"
+EXPECTED="CYWfkpw6GJEuBDHUMKGmDBkaTUTXpQTwRU"
+INPUT="5Jq8CqypGBFULBZy1YhjuMdeLat2HXRPjCKdLvdnAJ65SbrFsBM"
+OUTPUT=$($BITCOIN_TOOL \
+	--input-type private-key-wif \
+	--input-format base58check \
+	--output-type address \
+	--output-format base58check \
+	--network cryptorescue \
+	--input "${INPUT}")
+check "${TEST}" "${OUTPUT}" "${EXPECTED}" || exit 1
+# -----------------------------------------------------------------------------
 TEST="prefix8 - WIF uncompressed private key to address (ravencoin)"
 EXPECTED="RRKyGJUJz54wM5kF8jvxjCTkbchiXrRti2"
 INPUT="5Jq8CqypGBFULBZy1YhjuMdeLat2HXRPjCKdLvdnAJ65SbrFsBM"

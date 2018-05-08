@@ -199,8 +199,23 @@ https://github.com/jl777/komodo/blob/a86845f3dc5444d24f4420908125f4c4cb58b4ff/sr
 		.script_prefix           = 196,
 		.private_key_prefix      = 239
 	},
+	/*
+	CryptoRescue:
+	https://github.com/cryptorescue-project/cryptorescue/blob/master/src/chainparams.cpp#L179
+	*/
+	{
+		.name                    = "cryptorescue",
+		.public_key_prefix       = 28,
+		.script_prefix           = 122,
+		.private_key_prefix      = 128
+	},
+	{
+		.name                    = "cryptorescue-testnet",
+		.public_key_prefix       = 88,
+		.script_prefix           = 193,
+		.private_key_prefix      = 233
+	},
 };
-
 BitcoinKeyPrefix BitcoinNetworkType_GetPublicKeyPrefix(const struct BitcoinNetworkType *n)
 {
 	return n->public_key_prefix;
